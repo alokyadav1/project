@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background color Project</title>
+    <style>
+        button{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            background-color: black;
+            color: whitesmoke;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 2em;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .8);
+        }
+        button:active{
+            background-color: rgba(0, 0, 0, .8);
+        }
+    </style>
+</head>
+<body>
+    <Button onclick="changeBackground()">Change Background Color</Button>
+    <script>
+        function changeBackground(){
+            var color = ["red", "blue", "green", "orange", "yellow", "pink", "whitesmoke", "black"];
+            var index = Math.floor(Math.random() * 8);
+            var randomColor = color[index];
+            document.body.style.backgroundColor = randomColor;
+        }
+        
+    </script>
+</body>
+</html>
