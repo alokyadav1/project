@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change background color using HEX values</title>
+    <style>
+        button{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            background-color: black;
+            color: whitesmoke;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 2em;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, .8);
+        }
+        button:active{
+            background-color: rgba(0, 0, 0, .8);
+        }
+        h1{
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        span{
+            color: whitesmoke;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, .2);
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hex Value : <span id="hexValue"></span></h1>
+    <Button onclick="changeBackground()">Change Background Color</Button>
+    <script>
+        function generateHex(){
+            var hexValues = ["0", "1","2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+            var randomColor = "";
+            for(let i = 1; i<=6; i++){
+                let index = Math.floor(Math.random() * 16);
+                randomColor += hexValues[index];
+            }
+            return randomColor;
+        }
+        function changeBackground(){
+            var hexValue = generateHex();
+            hexValue = "#" + hexValue;
+            document.body.style.backgroundColor = hexValue;
+            var span = document.getElementById('hexValue');
+            span.innerText = hexValue;
+        }
+    </script>
+</body>
+</html>
