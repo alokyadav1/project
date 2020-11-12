@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial - Javascript Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        html{
+            font-family: 'Courier New', Courier, monospace;
+        }
+        body{
+            background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(img/testimonial/questionBcg.jpeg);
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            box-sizing: border-box;
+        }
+        .header{
+            margin-top: 40px;
+            color: white;
+            text-align: center;
+        }
+        .header h3{
+            color: red;
+            font-size: 1.3em;
+        }
+        .header h1{
+            font-size: 2em;
+            margin-top: -10px;
+            letter-spacing: 1.5px;
+        }
+        .testimonial{
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -65%);
+            text-align: center;
+            padding: 22px;
+            width: 500px;
+            height: 270px;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .8);
+            border-radius: 5px;
+        }
+        .testimonial *{
+            position: relative;
+        }
+        .testimonial img{
+            position: relative;
+            top: -70px;
+            width: 140px;
+            height: 90px;
+            border-radius: 50%;
+        }
+        .testimonial .customer-name{
+            top: -40px;
+            font-size: 1.6em;
+            margin: 0 0 15px 0;
+            padding: 0;
+        }
+        .testimonial .fa-star{
+            top: -40px;
+            color: red;
+            font-size: 1.2em;
+        }
+        .testimonial .next-prev{
+            padding: 15px 10px;
+            border-radius: 50%;
+            font-size: 1.2em;
+            border: 1.5px solid red;
+            background-color: transparent;
+            color: red;
+            font-weight: bold;
+            top: 45%;
+            transition: 1s;
+            cursor: pointer;
+            outline: skyblue;
+        }
+        .testimonial .next-prev:hover{
+            background-color: red;
+            color: white;
+        }
+        .testimonial #prev{
+            position: absolute;
+            left: -40px;
+            float: left;
+        }
+        .testimonial #next{
+            position: absolute;
+            right:-40px;
+            float: right;
+        }
+        .testimonial .comment{
+            top: -40px;
+            font-family: sans-serif;
+            letter-spacing: .2px;
+            line-height: 22px;
+            margin-bottom: 0;
+        }
+        .testimonial .fa-quote-left{
+            color: red;
+            font-size: 2em;
+            margin-top: -20px;
+        }
+        @media only screen and (max-width: 412px){
+            .header{
+                margin: initial;
+            }
+            .header h1{
+                font-size: 2em;
+                text-shadow: 1px 1px 1px  white,
+                            -1px -1px 1px white,
+                            1px 1px 1px white,
+                            -1px -1px 1px white;
+            }
+            .header h3{
+                text-shadow: .5px .5px 1px  red,
+                            -.5px -.5px 1px red,
+                            .5px .5px 1px red,
+                            -.5px -.5px 1px red;
+            }
+            .testimonial{
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: initial;
+                width: initial;
+                height: 350px;
+                margin-top: 100px;
+            }
+            .testimonial *{
+                font-size: initial;
+            }
+            .testimonial .next-prev{
+                top: 105%;
+                border: 1px solid white;     
+                color: white;          
+            }
+            .testimonial #prev{
+                left: 10%;
+            }
+            .testimonial #next{
+                right: 10%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <h3 class="client">CLIENT</h3>
+        <h1 class="logo">TESTIMONIAL</h1>
+    </section>
+    <section class="container">
+        <div class="testimonial">
+            <img src="img/testimonial/customer-1.jpg" alt="customer-1" id="customer-img">
+            <p class="customer-name">SANDY</p>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <p class="comment">
+                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock
+            </p>
+            <i class="fa fa-quote-left"></i>
+            <button class="next-prev" id="prev">
+                <i class="fa fa-chevron-left"></i>
+            </button>
+            <button class="next-prev" id="next">
+                <i class="fa fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+    <script>
+        var sandy = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock";
+
+        var amy = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.";
+
+        var tyrell = "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.";
+
+        var wanda = "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
+
+        var john = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis neque reprehenderit laborum, corporis explicabo assumenda. Porro impedit consectetur animi, reprehenderit recusandae sapiente at aliquam reiciendis modi ipsam rerum suscipit distinctio?";
+
+        var customer = [
+            ["sandy", "img/testimonial/customer-1.jpg", sandy],
+            ["john", "img/testimonial/customer-0.jpg", john],
+            ["amy", "img/testimonial/customer-2.jpg", amy],
+            ["tyrell", "img/testimonial/customer-3.jpg", tyrell],
+            ["wanda", "img/testimonial/customer-4.jpg", wanda]
+        ];
+        var customer_img = document.getElementById('customer-img');
+        var customer_name = document.getElementsByClassName('customer-name')[0];
+        var comment = document.getElementsByClassName('comment')[0];
+        var prev = document.getElementById('prev');
+        var next = document.getElementById('next');
+        prev.addEventListener("click", prevFeedback);
+        next.addEventListener("click", nextFeedback);
+
+        var index = 0;
+        function prevFeedback(){
+            index--;
+            if(index < 0)
+                index = customer.length - 1;
+            let cn = customer[index][0];
+            let ci = customer[index][1];
+            let c = customer[index][2];
+            customer_name.innerText = cn;
+            customer_img.src = ci;
+            comment.innerText = c;
+        }
+
+        function nextFeedback(){
+           index++;
+           if(index >= customer.length)
+                index = 0;
+           let cn = customer[index][0];
+           let ci = customer[index][1];
+           let c = customer[index][2];
+           customer_name.innerText = cn;
+           customer_img.src = ci;
+           comment.innerText = c;
+        }
+    </script>
+</body>
+</html>
