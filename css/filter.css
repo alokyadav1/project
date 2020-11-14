@@ -181,8 +181,8 @@ body{
     .header nav a:hover{
         background-color: whitesmoke;
     }
-    .greet h2{
-        margin: ;
+    .greet span{
+        font-size:4.5rem;
     }
     .contact, .cart{
         display: none;
