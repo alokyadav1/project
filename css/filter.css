@@ -104,6 +104,7 @@ body{
     background-color: whitesmoke;
     height: 35vh;
     margin-top: 2rem;
+    padding-top: 1rem;
 }
 .store-header h1 strong{
     font-size: 4rem;
