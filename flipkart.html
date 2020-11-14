@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flipkart</title>
+    <link rel="stylesheet" href="css/flipkart.css" type="text/css">
+    <script src="https://kit.fontawesome.com/ddbd1468db.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img/fi.jfif" type="image/jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body onload="load()">
+    <section id="loader">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+        <div class="violet fourth"></div>
+        <div class="violet fifth"></div>
+    </section>
+    <div id="main">
+   <header class="bg-primary text-light">
+               <span class="bar left" onclick="show()"><i class="fas fa-bars"></i></span>
+               <figure class="header-figure left">
+                   <img src="http://alok-yadav.000webhostapp.com/img/flipkart.png" alt="flipkart" width="80px">
+                   <figcaption><i><a href="#"><span id="explore">Explore</span> <span id="plus">Plus</span></a></i></figcaption>
+               </figure>
+                <button class="login right">Login</button>
+                <div class="cart right">
+                    <i class="fas fa-shopping-cart" style="color:white"></i>
+                </div>
+         <form action="#" class="search">
+            <div>
+                <input type="text" placeholder="Search for products,brands and more">
+                 <button type="submit" class="sicon"><i class="fas fa-search"></i></button>
+            </div>
+           
+        </form>
+   </header>
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="http://alok-yadav.000webhostapp.com/img/iqoo.jpg" alt="iqoo" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+            <img src="http://alok-yadav.000webhostapp.com/img/nivea.jpg" alt="nivea" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+            <img src="http://alok-yadav.000webhostapp.com/img/realme.jpg" alt="realme" width="1100" height="500">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+<div id="bar">
+    <div class="bar_header bg-primary">
+        <i class="fas fa-home"></i>
+        <h5>Home</h5>
+        <img src="http://alok-yadav.000webhostapp.com/img/flipIcon.jpg" alt="fli" width="50px" height="50px">
+    </div>
+    <span id="closeBar" onclick="hide()">&times;</span>
+    <ul id="list">
+        <li>
+            <i class="fas fa-bolt"></i>
+            <a href="#">SuperCoin Zone</a>
+        </li>
+        <li>
+            <img src="http://alok-yadav.000webhostapp.com/img/plus.jpg" alt="plus">
+            <a href="#" style="margin-left: 15px;">Flipkart Plus Zone</a>
+        </li>
+        <li>
+            <i class="fas fa-mobile-alt"></i>
+            <a href="#">Electronics</a>
+        </li>
+        <i class="fas fa-tv"></i>
+            <a href="#">TVs & Appliances</a>
+        </li>
+        <li>
+            <i class="fas fa-tshirt"></i>
+            <a href="#">Fashion</a>
+        </li>
+        <li>
+            <i class="fas fa-bolt"></i>
+            <a href="#">Home and Furniture</a>
+        </li>
+        <li>
+            <i class="fas fa-bolt"></i>
+            <a href="#">Toys and Baby</a>
+        </li>
+        <li>
+            <i class="fas fa-pump-soap"></i>
+            <a href="#">Beauty and Personal Care</a>
+        </li>
+        <li>
+            <i class="fas fa-book"></i>
+            <a href="#">Sports,Books and more</a>
+        </li>
+        <li>
+            <i class="fas fa-bolt"></i>
+            <a href="#">Refurbished Products</a>
+        </li>
+        <li>
+            <i class="fas fa-plane" style="transform: rotate(-45deg);"></i>
+            <a href="#">Flights</a>
+        </li>
+        <li>
+            <i class="fas fa-shield-alt"></i>
+            <a href="#">Insurance</a>
+        </li>
+        <li>
+            <i class="fas fa-language"></i>
+            <a href="#">Choose language / भाषा चूनें</a>
+        </li>
+        <li>
+            <i class="fas fa-shopping-bag"></i>
+            <a href="#">Sell on Flipkart</a>
+        </li>
+        <li>
+            <i class="fas fa-list"></i>
+            <a href="#">My Orders</a>
+        </li>
+        <li>
+            <i class="fas fa-star"></i>
+            <a href="#">My Coupons</a>
+        </li>
+        <li>
+            <i class="fas fa-shopping-cart"></i>
+            <a href="#">My Cart</a>
+        </li>
+        <li>
+            <i class="fas fa-heart"></i>
+            <a href="#">my wishlist</a>
+        </li>
+        <li>
+            <i class="fas fa-user"></i>
+            <a href="#">my account</a>
+        </li>
+        <li>
+            <i class="fas fa-bell"></i>
+            <a href="#">my Notifications</a>
+        </li>
+        <li>
+            <a href="#">Notification preferences</a>
+        </li>
+        <li>
+            <a href="#">gift card</a>
+        </li>
+        <li>
+            <a href="#">help centre</a>
+        </li>
+        <li>
+            <a href="#">legal</a>
+        </li>
+    </ul>
+</div> 
+<div id="modal">
+    <div class="header">
+        <h2>Details</h2>
+        <span class="Close" onclick="detailClose()">&times;</span>
+    </div>
+    <hr>
+    <div class="body">
+        <section class="d-flex justify-content-around"> 
+            <div id="overview" onclick="overview(this)">Overview</div>
+            <div id="features" onclick="features(this)">Features</div>
+        </section><br>
+        <div id="overview-content"></div>
+        <div id="feature-content"></div>
+    </div>
+    <hr>
+    <div class="footer">
+        <button class="btn btn-primary">BUY</button>
+        <button class="Close" onclick="detailClose()">Close</button>
+    </div>
+</div>
+<h3 style="margin-top: 10px;text-align: center;">Mobiles</h3>
+<section class="d-flex flex-container justify-content-center flex-wrap">
+        <div class="flex-fill">
+            <figure>
+                <i class="fas fa-ellipsis-v"></i>
+                <i class="fas fa-heart" onclick="heart(this)"></i>
+                <img src="http://alok-yadav.000webhostapp.com/img/honor-9x.jpeg" alt="honor-9x">
+                <figcaption>
+                <p>Honor 9X(midnight black)</p>
+                <p>16MP pop-up selfie</p>
+                <strong>₹13,999</strong>
+                <del>₹15,999</del><br><br>
+                <button class="btn btn-primary" onclick="detail(this)">BUY</button>
+                </figcaption>
+                <section class="features">
+                    <ul>
+                        <li>6 GB RAM | 128 GB ROM | Expandable Upto 512 GB</li>
+                        <li>16.74 cm (6.59 inch) Full HD+ Display</li>
+                        <li>45MP + 8MP + 2MP | 16MP Front Camera</li>
+                        <li>4000 mAh Lithium polymer Battery</li>
+                        <li>Kirin 710F Processor</li>
+                        <li>Pop Up Selfie AI Camera with Full View Display</li>
+                        <li>Brand Warranty of 1 year Available for Mobile and 6 Months for USB Adapter and 3 Months for Data Cable</li>
+                    </ul>
+                </section>
+            </figure>
+        </div>
+        <div class="flex-fill">
+            <figure>
+                <i class="fas fa-ellipsis-v"></i>
+                <i class="fas fa-heart heart" onclick="heart(this)"></i>
+                <img src="http://alok-yadav.000webhostapp.com/img/realme-3-pro.jpeg" alt="realme-3-pro">
+                <figcaption>
+                    <p>realme 3 Pro</p>
+                    <p>25MP selfie Camera</p>
+                    <strong>₹12,999</strong>
+                    <del>₹13,999</del><br><br>
+                    <button class="btn btn-primary" onclick="detail(this)">BUY</button>
+                </figcaption>
+                <section class="features">
+                    <ul>
+                        <li>6 GB RAM | 128 GB ROM | Expandable Upto 256 GB</li>
+                        <li>16.0 cm(6.3 inch) Full HD + Display</li>
+                        <li>16MP + 5MP | 25MP Front Camera</li>
+                        <li>4045 mAh Battery</li>
+                        <li>Qualcomm Snapdragon 710 Octa Core 2.2 GHz AIE Processor</li>
+                        <li>VooC Flash Charge 3.0</li>
+                        <li>Dual Nano SIM Slot and Memory Card Slot</li>
+                        <li>Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories</li>
+                    </ul>
+                </section>
+            </figure>
+        </div>
+        <div class="flex-fill">
+        <figure>
+            <i class="fas fa-ellipsis-v"></i>
+            <i class="fas fa-heart heart" onclick="heart(this)"></i>
+            <img src="http://alok-yadav.000webhostapp.com/img/mi-redmi-8a.jpeg" alt="mi-redmi-8a">
+            <figcaption>
+                <p>Redmi 8a</p>
+                <p>5,000 mAh battery</p>
+                <strong>₹6,999</strong>
+                <del>₹7,999</del><br><br>
+                <button class="btn btn-primary" onclick="detail(this)">BUY</button>
+            </figcaption>
+            <section class="features">
+                <ul>
+                    <li>2 GB RAM | 32 GB ROM | Expandable Upto 512 GB</li>
+                    <li>15.8 cm(6.22 inch) HD + Display</li>
+                    <li>12MP Rear Camera | 8MP Front Camera</li>
+                    <li>5000 mAh Battery</li>
+                    <li>Qualcomm Snapdragon 439 Processor</li>
+                    <li>Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories</li>
+                </ul>
+            </section>
+        </figure>
+        </div>
+        <div class="flex-fill">
+            <figure>
+                <i class="fas fa-ellipsis-v"></i>
+                <i class="fas fa-heart heart" onclick="heart(this)"></i>
+                <img src="http://alok-yadav.000webhostapp.com/img/redmi-note-7s.jpeg" alt="redmi-note-7s">
+                <figcaption>
+                    <p>Redmi Note 7s</p>
+                    <p>48MP+5MP Rear Camera</p>
+                    <strong>₹9,999</strong>
+                    <del>₹11,999</del><br><br>
+                    <button class="btn btn-primary" onclick="detail(this)">BUY</button>
+                </figcaption>
+                <section class="features">
+                   <ul>
+                        <li>4 GB RAM | 64 GB ROM | Expandable Upto 256 GB</li>
+                        <li>16.0 cm(6.3 inch) Full HD + Display</li>
+                        <li>48MP + 5MP | 13MP Front Camera</li>
+                        <li>4000 mAh Battery</li>
+                        <li>Qualcomm Snapdragon 660 AIE Processor</li>
+                        <li>Splash Proof - Protected by P2i</li>
+                        <li>Quick Charge 4.0 Support</li>
+                        <li>Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories</li>
+                   </ul>
+                </section>
+            </figure>
+        </div>
+        <div class="flex-fill">
+            <figure>
+                <i class="fas fa-ellipsis-v"></i>
+                <i class="fas fa-heart heart" onclick="heart(this)"></i>
+                <img src="http://alok-yadav.000webhostapp.com/img/samsung-galaxy-s10-lite.jpeg" alt="samsung-galaxy-s10-lite">
+                <figcaption>
+                    <p>Samsung Galaxy S10 Lite</p>
+                    <p>48MP Quad Cam</p>
+                    <strong>₹42,099</strong>
+                    <del>₹43,999</del><br><br>
+                    <button class="btn btn-primary" onclick="detail(this)">BUY</button>
+                </figcaption>
+                <section class="features">
+                    <ul>
+                        <li>8 GB RAM | 128 GB ROM | Expandable Upto 1 TB</li>
+                        <li>17.02 cm(6.7 inch) Full HD + Display</li>
+                        <li>48MP + 12MP + 5MP | 32MP Front Camera</li>
+                        <li>4500 mAh Lithium - ion Battery</li>
+                        <li>Qualcomm Snapdragon 855(SM8150) Processor</li>
+                        <li>Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories</li>
+                    </ul>
+                </section>
+            </figure>
+        </div>
+</section>
+<span class="top"><a href="#main" class="bg-dark text-light"><i class="fas fa-chevron-up"></i></a></span>
+<h3 style="margin-top: 10px;text-align: center;">Laptops</h3>
+<section class="d-flex flex-container justify-content-center flex-wrap Laptop">
+    <div class="flex-fill">
+        <figure>
+            <i class="fas fa-ellipsis-v"></i>
+            <i class="fas fa-heart heart" onclick="heart(this)"></i>
+            <img src="http://alok-yadav.000webhostapp.com/img/acer predator.jpeg" alt="acer predator">
+            <figcaption>
+                <p>Acer predator triton 300 Core i5 9th gen</p>
+                <p>8 GB/1 TB HDD/Windows 10</p>
+                <strong>₹64,990</strong>
+                <del>₹97,890</del><br><br>
+                <button class="btn btn-primary" onclick="detail(this)">BUY</button>
+            </figcaption>
+            <section class="features">
+               <ul>
+                <li>NVIDIA Geforce GTX 1650 for Desktop Level Performance</li>
+                <li>15.6 inch Full HD LED Backlit Anti-glare IPS Display</li>
+                <li>Light Laptop without Optical Disk Drive</li>
+                <li>Pre-installed Genuine Windows 10 OS</li>
+               </ul>
+            </section>
+        </figure>
+    </div>
+    <div class="flex-fill">
+        <figure>
+            <i class="fas fa-ellipsis-v"></i>
+            <i class="fas fa-heart heart" onclick="heart(this)"></i>
+            <img src="http://alok-yadav.000webhostapp.com/img/acer-Nitro 5.jpeg" alt="acer-Nitro">
+            <figcaption>
+                <p>Acer Nitro 5 Ryzen Quad core</p>
+                <p>8 GB/1 TB HDD/Windows 10</p>
+                <strong>₹52,990</strong>
+                <del>₹73,999</del><br><br>
+                <button class="btn btn-primary" onclick="detail(this)">BUY</button>
+            </figcaption>
+            <section class="features">
+               <ul>
+                    <li>15.6 inch Full HD LED Backlit Anti-glare IPS Display</li>
+                    <li>Light Laptop without Optical Disk Drive</li>
+                    <li>Pre-installed Genuine Windows 10 OS</li>
+               </ul>
+            </section>
+        </figure>
+    </div>
+    <div class="flex-fill">
+        <figure>
+            <i class="fas fa-ellipsis-v"></i>
+            <i class="fas fa-heart heart" onclick="heart(this)"></i>
+            <img src="http://alok-yadav.000webhostapp.com/img/asus rog.jpeg" alt="asus rog">
+            <figcaption>
+                <p>Asus ROG strix G Core i7 9th Gen</p>
+                <p>8 GB/1 TB HDD/256 GB SSD/Windows 10</p>
+                <strong>₹81,990</strong>
+                <del>₹1,13,990</del><br><br>
+                <button class="btn btn-primary" onclick="detail(this)">BUY</button>
+            </figcaption>
+            <section class="features">
+               <ul>
+                    <li>NVIDIA Geforce GTX 1650 for Desktop Level Performance</li>
+                    <li>15.6 inch Full HD LED Backlit Anti-glare IPS Display (With 120 Hz Refresh Rate)</li>
+                    <li>Light Laptop without Optical Disk Drive</li>
+                    <li>Pre-installed Genuine Windows 10 OS</li>
+               </ul>
+            </section>
+        </figure>
+    </div>
+    <div class="flex-fill">
+        <figure>
+            <i class="fas fa-ellipsis-v"></i>
+            <i class="fas fa-heart heart" onclick="heart(this)"></i>
+            <img src="http://alok-yadav.000webhostapp.com/img/lenovo ideapad.jpeg" alt="lenovo ideapad">
+            <figcaption>
+                <p>Lenovo Ideapad L340 core i5 9th Gen </p>
+                <p>8 GB/1 TB HDD/Windows 10</p>
+                <strong>₹64,990</strong>
+                <del>₹97,890</del><br><br>
+                <button class="btn btn-primary" onclick="detail(this)">BUY</button>
+            </figcaption>
+            <section class="features">
+                <ul>
+                    <li>Pre-installed Genuine Windows 10 OS</li>
+                    <li>NVIDIA Geforce UHD 620 for High Graphics Performance</li>
+                    <li>Preloaded MS Office Home and Student 2016</li>
+                    <li>Light Laptop without Optical Disk Drive</li>
+                    <li>15.6 inch Full HD LED Backlit Anti-glare Display</li>
+                </ul>
+            </section>
+        </figure>
+    </div>
+    <div class="flex-fill">
+        <figure>
+            <i class="fas fa-ellipsis-v"></i>
+            <i class="fas fa-heart heart" onclick="heart(this)"></i>
+            <img src="http://alok-yadav.000webhostapp.com/img/msi.jpeg" alt="msi">
+            <figcaption>
+                <p>MSI G Ryzen 7 Quad Core</p>
+                <p>16 GB/1 TB HDD/256 GB SSD/Windows 10</p>
+                <strong>₹42,099</strong>
+                <del>₹43,999</del><br><br>
+                <button class="btn btn-primary" onclick="detail(this)">BUY</button>
+            </figcaption>
+            <section class="features">
+               <ul>
+                    <li>15.6 inch Full HD LED Backlit IPS Thin Bezel Display (With 120 Hz Refresh Rate)</li>
+                    <li>Light Laptop without Optical Disk Drive</li>
+                    <li>Pre-installed Genuine Windows 10 OS</li>
+               </ul>
+            </section>
+        </figure>
+    </div>
+</section>
+</div>
+<script src="js/flipkart.js"></script>
+</body>
+</html>
