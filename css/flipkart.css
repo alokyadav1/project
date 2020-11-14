@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+ .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+#main{
+    display: none;
+}
+#loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#loader div{
+    float: left;
+    width: 7px;
+    height: 7px;
+    margin: 10px;
+    border-radius: 50%;
+}
+.first{
+    animation:animate .6s infinite;
+    background: indigo;
+}
+.second{
+    animation:animate .6s infinite .1s ;
+    background: indigo;
+}
+.third{
+    animation:animate .6s infinite .2s;
+    background: indigo;
+}
+.fourth{
+    animation:animate .6s infinite .3s;
+     background: violet;
+}
+.fifth{
+    animation:animate .6s infinite .4s;
+     background: violet;
+}
+@keyframes animate{
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(3,3);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+header{
+    position:fixed;
+    top:0;
+    height:13vh;
+    width:100%;
+    z-index:10;
+}
+.bar{
+    margin:5px 20px 0 10px;
+}
+.header-figure{
+    margin:5px 20px 0 2px;
+}
+.login{
+    background:transparent;
+    margin:5px 10px 0 10px;
+    border:none;
+    outline:none;
+    color:white;
+}
+.cart{
+    margin:5px 10px 0 10px;
+}
+.left{
+    display:inline;
+    float:left;
+}
+.right{
+    display:inline;
+    float:right;
+}
+.search{
+    position:relative;
+}
+.search div{
+    position:absolute;
+    width:97vw;
+    top:35px;
+    left:5px;
+    background:white;
+}
+.search input{
+    width:90%;
+    padding:5px;
+    border:none;
+    outline:none;
+}
+.sicon{
+    position:relative;
+    left:3%;
+    border:none;
+    outline:none;
+    background:transparent;
+    color: #2874f0;
+}
+.sicon:focus{
+    outline: none;
+    border: none;
+}
+.carousel{
+    margin-top:13vh;
+}
+#bar{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 10;
+    background: white;
+    width: 250px;
+    height: 100%;
+    box-shadow:2px 2px 5px rgba(50,50,50,.4);
+    transition: .3s linear;
+}
+#list{
+    padding: 10px;
+    line-height: 30px;
+    list-style:none;
+}
+#list li img{
+    width: 12px;
+    height: 12px;
+}
+#list a{
+    text-decoration: none;
+    color:black;
+    margin-left: 5px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+#list i{
+    width: 20px;
+}
+
+#closeBar{
+    position: absolute;
+    top:0;
+    right:0;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transform: scale(2,2);
+}
+.bar_header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.bar_header i{
+    margin-left:10px ;
+    color:white;
+}
+.bar_header h5{
+    margin-top:10px;
+    margin-left: -70px;
+    color:white;
+}
+.bar_header img{
+   margin-right: 30px;
+}
+
+#modal{
+    position: fixed;
+    top:-200%;
+    width: 100%;
+    height: auto;
+    z-index: 15;
+    transition: .8s;
+    background-color: black;
+    color: white;
+    padding:0 10px 10px 10px;
+}
+.header{
+    background-color: black;
+    font-size: 20px;
+    text-align: center;
+}
+.header span{
+    position: absolute;
+    top: 0;
+    right:0;
+    padding: 5px 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+}
+.body{
+    margin: 10px 0;
+    position: relative;
+    width: 100%;
+}
+.body section{
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 15;
+}
+#overview,#features{
+    background-color: rgba(50,50,50);
+    width: 100%;
+    padding: 10px;
+    margin:0 4px 10px 0;
+    text-align: center;
+    cursor: pointer;
+}
+#overview{
+    border-bottom: 2px solid #2874f0;
+}
+#overview-content i{
+    display: none;
+}
+#overview-content img{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 8px rgba(50,50,50,.2),
+                -2px -2px 10px rgba(50,50,50,.2);
+    border-radius: 10px;
+}
+#overview-content figcaption{
+    text-align: center;
+}
+#overview-content del{
+    font-size: 13px;
+    opacity: .8;
+}
+#overview-content .btn,#overview-content section{
+    display: none;
+}
+#feature-content ul{
+    margin:5px 10px;
+}
+#feature-content{
+    display: none;
+}
+#feature-content i,#feature-content img{
+    display: none;
+}
+#feature-content figcaption{
+    display: none;
+}
+.footer{
+    width: 95%;
+    background-color: white;
+    margin: 10px;
+}
+.footer .btn{
+    border: none;
+    width: 20%;
+    padding: 10px;
+    margin: 0 20px 20px;
+    border-radius: 5px;
+    float: left;
+}
+
+.footer .Close{
+    background-color: rgba(255,50,90,.9);
+    border: none;
+    width: 20%;
+    padding: 10px;
+    margin: 0 20px 20px;
+    border-radius: 5px;
+    color: white;
+    float: right;
+}
+.top a{
+    text-decoration: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    text-align: right;
+    padding: 14px 19px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgba(50,50,50,.2),
+                -3px -3px 10px rgba(50,50,50,.2);
+    z-index: 20;
+}
+.flex-container div{
+    position: relative;
+    width:auto;
+    background:whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    transition: .2s;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(50,50,50,.2),
+                -3px -3px 10px rgba(50,50,50,.2);
+}
+.flex-container div figure{
+    text-align: center;
+}
+.flex-container div figure del{
+    font-size: 13px;
+    opacity: .8;
+}
+.flex-container div figure div{
+    display: none;
+}
+.flex-container div figure section{
+    display: none;
+}
+.flex-container div figure .fa-ellipsis-v{
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 20px;
+    color: black;
+    transition: .2;
+}
+.flex-container div figure .fa-heart{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    color: black;
+    transition: .2s;
+}
+.flex-container div:hover .fa-ellipsis-v{
+    display: block;
+}
+.flex-container div:hover .fa-heart{
+    display: block;
+}
+.Laptop div img{
+   transform: scale(.8,.8);
+}
