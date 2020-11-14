@@ -1,0 +1,218 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
+
+body{
+    font-family: 'Kalam', cursive;
+    font-size: larger;
+}
+.header{
+    width: 100%;
+    padding: 10px;
+    height: 10vh;
+}
+.header .fa-bars{
+    display: none;
+}
+.contact{
+    margin-left: 10px;
+}
+.cart{
+    margin-right: 80px;
+}
+.nav li a{
+    color: gray;
+}
+.greet{
+    position: relative;
+    background: url("../img/filter_item/headerBcg.jpeg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 90vh;
+    text-align: center;
+    font-size: 2rem;
+    color: skyblue;
+}
+.greet div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+}
+.greet span{
+    color: #ef7998;
+    font-size: 5rem;
+    font-size: 900;
+}
+.greet button{
+    border: 3px solid black;
+}
+.about{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 4rem;
+    width: 100%;
+}
+.about .content{
+    padding-left: 10%;
+    width: 50%;
+    font-weight: 900;
+}
+.about .content h1, .about .content p{
+    width: 60%;
+}
+.content h1 span{
+    color: green;
+    font-size: 5rem;
+}
+
+.about .content p{
+    font-size: 1rem;
+    line-height: 1.1rem;
+    color: grey;
+}
+.about .image{
+    width: 40%;
+    position: relative;
+}
+.about .image::before{
+        content: "";
+        position: absolute;
+        top: -1.5rem;
+        left: -1.7rem;
+        width: 100%;
+        height: 100%;
+        outline: 0.5rem solid rgba(255, 255, 0, .5);
+        z-index: -1;
+        transition: all 1s ease-in-out;
+}
+.about .image:hover:before {
+    top: 0;
+    left: 0;
+  }
+.about .image img{
+   width: 100%;
+   height: 100%;
+}
+
+.store{
+    position: relative;
+    text-align: center;
+    background-color: whitesmoke;
+    height: 35vh;
+    margin-top: 1rem;
+}
+.store-header h1 strong{
+    font-size: 4rem;
+    color: red;
+}
+.filter-tag button{
+    margin: 8px;
+}
+
+.items{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+}
+.item{
+    background-color: white;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+.item .img{
+    width: 350px;
+    height: 250px;
+    background-attachment: fixed;
+}
+.item .img img{
+    width: 350px;
+    height: 250px;
+    border-radius: 10px 10px 0 0;
+}
+
+.item .desc{
+    position: relative;
+    padding: 20px;
+    clear: both;
+}
+.desc .name{
+    float: left;
+}
+.desc .price{
+    float: right;
+}
+
+@media only screen and (max-width:576px){
+    .header{
+        position: relative;
+        display: block;
+        height: fit-content;
+    }
+    .header .fa-bars{
+        position: absolute;
+        right: 1rem;
+        display: block;
+        font-size: 1.8rem;
+        color: dimgrey;
+    }
+    .header nav{
+        display: none;
+        position: absolute;
+        top: 100%;
+        z-index: 10;
+        background-color: white;
+        width: 100%;
+        margin: -10px;
+        transition: all .5s ease-in-out;
+    }
+    .header nav a{
+        text-align: center;
+    }
+    .header nav a:hover{
+        background-color: whitesmoke;
+    }
+    .greet h2{
+        margin: ;
+    }
+    .contact, .cart{
+        display: none;
+    }
+
+    .about{
+        display: block;
+        width: 100%;
+    }
+    .about .content{
+        position: relative;
+        width: 100%;
+        font-weight: 900;
+    }
+    .about .content h1, .about .content p{
+        text-align: justify;
+        width: 90%;
+    }
+    .about .content h1{
+        text-align: center;
+    }
+    .about .content button{
+       position: relative;
+       left: 50%;
+       transform: translateX(-50%);
+    }
+    .about .image{
+        width: 80%;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 15%;
+    }
+}
