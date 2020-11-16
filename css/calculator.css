@@ -2,7 +2,6 @@
         
         body{
             background:linear-gradient(to right,#e91e63,#3f51b5);
-                font-family:arial;
         }
         
         .box{
@@ -12,10 +11,9 @@
             top:50%;
             left:50%;
             transform:translate(-50%,-50%);
-            background-color:rgba(20,20,20, .6);
+            background-color:rgba(20,20,20);
             border-radius:10px;
             box-shadow:0 15px 25px;
-            width:fit-content;
 
         }
             #clear{
@@ -34,13 +32,11 @@
             
             
             input{
-                width:60px;
-                height:60px;
+                width:70px;
+                height:40px;
                 border-radius:5px;
                 font-size:22px;
                 font-weight:bold;
-                border:none;
-            
             }
             
             input[type='text']{
@@ -74,7 +70,6 @@
             #numbers{
                 background-color:green;
                 color:black;
-                      
             }
             
             #numbers:hover{
