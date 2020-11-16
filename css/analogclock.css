@@ -9,8 +9,8 @@ body{
 
 #clock
 {
-    height:550px;
-    width:550px;
+    height:300px;
+    width:300px;
     background-color: transparent;
     border-radius: 50%;
     border:1px solid yellow;
@@ -108,4 +108,10 @@ body{
     top:50px;
     width:5px;
     height: 100px;
+}
+
+@media only screen and (max-width:576px){
+    #clock, #container{
+        transform:scale(2, 2);
+    }
 }
