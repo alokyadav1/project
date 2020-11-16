@@ -2,6 +2,7 @@
         
         body{
             background:linear-gradient(to right,#e91e63,#3f51b5);
+                font-family:arial;
         }
         
         .box{
@@ -73,6 +74,7 @@
             #numbers{
                 background-color:green;
                 color:black;
+                border-radius:50%
             }
             
             #numbers:hover{
