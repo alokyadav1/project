@@ -1,4 +1,3 @@
-alert("Don't know why eventListener is not working\n If you know please tell me")
 var more = document.getElementsByClassName('more');
 var tag = document.getElementsByClassName('tag');
 for(let i = 0;i< more.length;i++){
