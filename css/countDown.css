@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+	  body{
+		  background: url("images/bg-stars.svg") hsl(235, 16%, 14%);
+		  font-size: 14px;
+		  font-family: 'Red Hat Text', sans-serif;
+	  }
+	  .title{
+		  height: 25vh;
+	  }
+	  .title h3{
+		  color: white;
+		  text-align: center;
+		  text-transform: uppercase;
+		  letter-spacing: 6px;
+		  padding-top: 5rem;
+	  }
+	  .timer{
+		  height: 45vh;
+		  width: fit-content;
+		  position: relative;
+		  display: flex;
+		  flex-direction: row;
+		  flex-wrap: wrap;
+		  align-items: center;
+		  justify-content: space-between;
+		  margin: 0 auto;
+	  }
+	 .card{
+		 position: relative;
+		 width: 8rem;
+		 color: white;
+		 margin: -6rem 0.5rem 0 0.5rem;
+	 }
+	  .card .num{
+			font-size: 5em;
+			background-color: hsl(236, 21%, 26%);
+			padding: 15px 10px;
+			border-radius: 10px;
+			opacity: .6;
+			text-align: center;
+	  }
+	  .card .lett{
+		  text-transform: uppercase;
+		  text-align: center;
+		  margin: 10px auto;
+		  color: hsl(235, 35%, 42%);
+	  }
+	  .social{
+		  position: relative;
+		  height:30vh;
+		  background: url("images/pattern-hills.svg");
+		  background-size: cover;
+	  }
+	  .social .img{
+		  position: absolute;
+		  left: 50%;
+		  top: 40%;
+		  transform: translate(-50%,40%);
+	  }
+	  .social .img img{
+		  margin: 0 .5rem;
+	  }
+    .attribution { font-size: 11px; text-align: center; }
+	.attribution a { color: hsl(228, 45%, 44%); }
+	
+
+	@media only  screen and (max-width: 375px){
+		.title h3{
+			width: fit-content;
+			text-align: center;
+			font-size: 1.2rem;
+		}
+		.card{
+			width: fit-content;
+			margin: -6rem 0.2rem 0 0.5rem;
+		}
+		.card .num{
+			font-size: 2.5em;
+			padding: 15px 12px;		
+	  }
+	  .card .lett{
+		  font-size: 10px;
+	  }
+	  
+	}
