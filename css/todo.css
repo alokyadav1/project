@@ -258,3 +258,11 @@ body{
     }
    
 }
+
+@media only screen and (max-height:530px){
+    .taskContainers .content{
+        position: fixed;
+        bottom: 20%;
+        max-height: 40vh;
+    }
+}
