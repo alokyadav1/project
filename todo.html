@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/todo.css" type="text/css">
+  <title>Todo app</title>
+</head>
+<body>
+	<div class="todo">
+		<div class="content">
+			<span id="alert">Please enter some task</span>
+			<h3>TODO</h3>
+			<img src="img/icon-sun.svg" alt="light theme">
+			<div>
+				<input type="text" id="create" placeholder="Create a new todo...">
+				<button id="add">&plus;</button>
+			</div>
+		</div>
+	</div>
+	<div class="taskContainers">
+		<div class="content">
+			<div class="tasks">
+				<div class="startup">
+					<h3>All tasks will be listed here!!</h3>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="remaining">
+					<p><span id="itemsLeft"></span> items left</p>
+				</div>
+				<div class="filter">
+					<span class="active allTasks">All</span>
+					<span class="activeTasks">Active</span>
+					<span class="completedTasks">Completed</span>
+				</div>
+				<div class="clear">
+					<p>Clear completed</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="filter" id="mobile">
+		<span class="active allTasks">All</span>
+		<span class="activeTasks">Active</span>
+		<span class="completedTasks">Completed</span>
+	</div>
+	<script src="js/todo.js"></script>
+</body>
+</html>
