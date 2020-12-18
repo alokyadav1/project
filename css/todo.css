@@ -263,9 +263,12 @@ body{
 }
 
 @media only screen and (max-height:530px){
+    #mobile{
+        border-top:1px solid blue
+    }
     .taskContainers .content{
         position: fixed;
-        bottom: 20%;
+        bottom: -10%;
         max-height: 40vh;
     }
 }
