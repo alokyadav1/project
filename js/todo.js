@@ -194,7 +194,7 @@ function changeTheme(){
   if(themeIcon.src.includes("sun")){
     mobileFilter.style.backgroundColor = "hsl(236, 33%, 92%)"
     mobileFilter.style.color = "rgba(0, 0, 0, .8)"
-    themeIcon.src = "img/icon-moon.svg"
+    themeIcon.src = "img/todo/icon-moon.svg"
     todo.style.backgroundImage = "url('img/todo/bg-desktop-light.jpg')"
     themeIcon.alt = "Dark theme"
     document.body.style.backgroundColor = "hsl(0, 0%, 98%)"
@@ -207,7 +207,7 @@ function changeTheme(){
   }
   else{
     mobileFilter.style.color = "white"
-    themeIcon.src = "img/icon-sun.svg"
+    themeIcon.src = "img/todo/icon-sun.svg"
     todo.style.backgroundImage = "url('img/todo/bg-desktop-dark.jpg')"
     themeIcon.alt = "light theme"
     document.body.style.backgroundColor = "hsl(235, 21%, 11%)"
