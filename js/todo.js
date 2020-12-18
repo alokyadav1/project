@@ -1,7 +1,11 @@
 var items = 0;
+var themeIcon = document.getElementById('themeIcon')
+var todo = document.getElementsByClassName('todo')[0]
+var add = document.getElementById('add')
 var checkbox = document.getElementsByClassName("checkbox");
 var startup = document.getElementsByClassName("startup")[0];
 var noTask = document.querySelector(".startup h3")
+var taskContent = document.querySelector(".taskContainers .content")
 var footer = document.querySelector(".taskContainers .content .footer");
 var add = document.getElementById("add");
 var tasks = document.getElementsByClassName("tasks")[0];
@@ -182,4 +186,37 @@ function setActiveClass(elmt) {
     completedTasks[i].classList.remove("active");
   }
   elmt.classList.add("active");
+}
+
+themeIcon.addEventListener("click", changeTheme)
+
+function changeTheme(){ 
+  if(themeIcon.src.includes("sun")){
+    mobileFilter.style.backgroundColor = "hsl(236, 33%, 92%)"
+    mobileFilter.style.color = "rgba(0, 0, 0, .8)"
+    themeIcon.src = "img/icon-moon.svg"
+    todo.style.backgroundImage = "url('img/todo/bg-desktop-light.jpg')"
+    themeIcon.alt = "Dark theme"
+    document.body.style.backgroundColor = "hsl(0, 0%, 98%)"
+    create.style.backgroundColor = "hsl(236, 33%, 92%)"
+    create.style.color = "hsl(235, 24%, 19%)"
+    add.style.color = "black"
+    taskContent.style.backgroundColor = "hsl(233, 11%, 84%)"
+    taskContent.style.color = "hsl(234, 11%, 40%)"
+    taskContent.style.boxShadow = "2px 2px 10px white"
+  }
+  else{
+    mobileFilter.style.color = "white"
+    themeIcon.src = "img/icon-sun.svg"
+    todo.style.backgroundImage = "url('img/todo/bg-desktop-dark.jpg')"
+    themeIcon.alt = "light theme"
+    document.body.style.backgroundColor = "hsl(235, 21%, 11%)"
+    create.style.backgroundColor = "rgb(37 39 60)"
+    create.style.color = "white"
+    add.style.color = "white"
+    taskContent.style.backgroundColor = "rgb(37 39 60)"
+    taskContent.style.color = "hsl(234, 11%, 52%)"
+    taskContent.style.boxShadow = "2px 2px 10px hsl(235, 21%, 11%)"
+    mobileFilter.style.backgroundColor = "rgb(37 39 60)"
+  }
 }
