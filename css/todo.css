@@ -12,7 +12,7 @@ body{
 }
 .todo{
     position: relative;
-    background: url("../img/bg-desktop-dark.jpg");
+    background: url("../img/todo/bg-desktop-dark.jpg");
     height: 35vh;
     margin: 0 auto;
     font-family: 'Josefin Sans', sans-serif;
@@ -194,6 +194,9 @@ body{
 /* media query for mobile devices*/
 
 @media only screen and (max-width:550px){
+    .todo{
+        background-image: url("../img/todo/bg-mobile-dark.jpg");
+    }
     .todo .content{
         width: 96%;
         left: 2%;
