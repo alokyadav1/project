@@ -262,7 +262,7 @@ body{
 @media only screen and (max-height:530px){
     .taskContainers .content{
         position: fixed;
-        bottom: -50%;
+        bottom: -10%;
         max-height: 40vh;
         z-index:-1
     }
