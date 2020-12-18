@@ -13,6 +13,8 @@ body{
 .todo{
     position: relative;
     background: url("../img/todo/bg-desktop-dark.jpg");
+    background-position: center;
+    background-size: cover;
     height: 35vh;
     margin: 0 auto;
     font-family: 'Josefin Sans', sans-serif;
@@ -51,6 +53,7 @@ body{
     width: 100%;
     color: white;
     font-size: large;
+    font-weight: bold;
     font-family: 'Josefin Sans', sans-serif;
     letter-spacing: 2px;
 }
@@ -81,14 +84,14 @@ body{
     font-size: 1rem;
 }
 
-.taskContainers, .activeTasks, .completedTasks{
+.taskContainers{
     position: relative;
     height: fit-content;
     margin: 0 auto;
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.taskContainers .content, .activeTasks .content, .completedTasks .content{
+.taskContainers .content{
     position: relative;
     left: 20%;
     transform: translateX(20%);
@@ -100,7 +103,7 @@ body{
 }
 .taskContainers .tasks .task{
     padding: 20px 15px;
-    border-bottom: .5px solid hsl(233, 14%, 35%);
+    border-bottom: .5px solid hsl(233, 14%, 25%);
     cursor: pointer;
 }
 .startup{
@@ -128,7 +131,7 @@ body{
     width: 0;
     position: absolute;
     cursor: pointer;
-    opacity:0
+    opacity: 0;
 }
 
 .taskContainers .container .checkmark{
@@ -214,19 +217,18 @@ body{
     }
     .todo #create{
         padding: 1.2rem 2rem 1.2rem 1rem;
-        z-index:10
+        outline-color: hsl(235, 21%, 11%);
     }
     .taskContainers .content{
         position: relative;
         left: 1%;
         transform: translateX(1%);
         width: 96%;
-        min-height: auto;
+        min-height: 2px;
         max-height: 62vh;
         overflow-y: auto;
         margin-top: -15%;
-        margin-bottom: 10vh;
-        box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+        box-shadow: 2px 2px 10px  hsl(235, 21%, 11%);
     }
     .taskContainers .content .footer .filter{
         display: none;
@@ -263,10 +265,7 @@ body{
 @media only screen and (max-height:530px){
     .taskContainers .content{
         position: fixed;
-        bottom: -10%;
+        bottom: 20%;
         max-height: 40vh;
-        z-index:-1
     }
-    #mobile{
-        border-top:1px solid orange
 }
