@@ -268,7 +268,7 @@ body{
     }
     .taskContainers .content{
         position: fixed;
-        bottom: -10%;
+        bottom: -25%;
         max-height: 40vh;
     }
 }
