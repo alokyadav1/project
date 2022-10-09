@@ -13,6 +13,37 @@ var create = document.getElementById("create");
 var alert = document.getElementById("alert");
 var mobileFilter = document.getElementById("mobile");
 var itemsLeft = document.getElementById("itemsLeft");
+let storage = [];
+window.onload = () => {
+  const data = JSON.parse(localStorage.getItem("storage"));
+  data.map(el => {
+    items = items + 1;
+    startup.style.display = "none";
+    var div = document.createElement("div");
+    var label = document.createElement("label");
+    var input = document.createElement("input");
+    var span = document.createElement("span");
+    var taskTitle = document.createElement("span");
+    div.setAttribute("class", "task");
+    label.setAttribute("class", "container");
+    input.setAttribute("type", "checkbox");
+    input.setAttribute("class", "checkbox");
+    input.setAttribute("onclick", "taskDone(this)");
+    span.setAttribute("class", "checkmark");
+    taskTitle.setAttribute("class", "tasktitle");
+    taskTitle.innerText = el.task;
+    storage.push({ "task": el.task })
+    footer.style.display = "flex";
+
+    label.appendChild(taskTitle);
+    label.appendChild(input);
+    label.appendChild(span);
+    div.appendChild(label);
+    tasks.insertBefore(div, tasks.childNodes[0]);
+    updateItems();
+  })
+}
+
 add.addEventListener("click", createTask);
 create.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
@@ -46,6 +77,7 @@ function createTask() {
   span.setAttribute("class", "checkmark");
   taskTitle.setAttribute("class", "tasktitle");
   taskTitle.innerText = create.value;
+  storage.push({ "task": create.value })
   create.value = "";
   footer.style.display = "flex";
 
@@ -55,6 +87,7 @@ function createTask() {
   div.appendChild(label);
   tasks.insertBefore(div, tasks.childNodes[0]);
   updateItems();
+  console.log(storage)
 }
 function updateItems() {
   itemsLeft.innerText = items;
@@ -78,6 +111,8 @@ function clearCompleted() {
   let taskCheckbox = document.querySelectorAll(".task .checkbox");
   for (let i = 0; i < taskCheckbox.length; i++) {
     if (taskCheckbox[i].checked) {
+      console.log(taskCheckbox[i].parentNode.textContent);
+      storage = storage.filter(el => el.task != taskCheckbox[i].parentNode.textContent)
       taskCheckbox[i].parentNode.parentNode.remove();
     }
   }
@@ -92,7 +127,7 @@ function updateLayout() {
     noTask.innerText = "All tasks will be listed here!!"
     document.getElementsByClassName('active')[0].click()
   }
-  else{
+  else {
     startup.style.display = "none"
   }
 }
@@ -119,11 +154,11 @@ for (let i = 0; i < completedTasks.length; i++) {
   });
 }
 
-function showAllTasks(ev){
+function showAllTasks(ev) {
   setActiveClass(ev);
   let taskCheckbox = document.querySelectorAll(".task .checkbox");
   for (let i = 0; i < taskCheckbox.length; i++) {
-      taskCheckbox[i].parentNode.parentNode.style.display = "block";
+    taskCheckbox[i].parentNode.parentNode.style.display = "block";
   }
   updateLayout()
 }
@@ -136,16 +171,16 @@ function showActiveTasks(ev) {
     if (taskCheckbox[i].checked) {
       taskCheckbox[i].parentNode.parentNode.style.display = "none";
     }
-    else{
+    else {
       isActive = true
       taskCheckbox[i].parentNode.parentNode.style.display = "block";
     }
   }
-  if(!isActive){
+  if (!isActive) {
     startup.style.display = "block"
     noTask.innerText = "No Active task found"
   }
-  else{
+  else {
     startup.style.display = "none"
   }
 
@@ -156,19 +191,19 @@ function showCompletedTasks(ev) {
   let isCompleted = false
   let taskCheckbox = document.querySelectorAll(".task .checkbox");
   for (let i = 0; i < taskCheckbox.length; i++) {
-    if(!taskCheckbox[i].checked) {
+    if (!taskCheckbox[i].checked) {
       taskCheckbox[i].parentNode.parentNode.style.display = "none";
     }
-    else{
+    else {
       taskCheckbox[i].parentNode.parentNode.style.display = "block";
       isCompleted = true
     }
   }
-  if(!isCompleted){
+  if (!isCompleted) {
     startup.style.display = "block"
-    noTask.innerText = "No completed task found" 
+    noTask.innerText = "No completed task found"
   }
-  else{
+  else {
     startup.style.display = "none"
   }
 }
@@ -190,8 +225,8 @@ function setActiveClass(elmt) {
 
 themeIcon.addEventListener("click", changeTheme)
 
-function changeTheme(){ 
-  if(themeIcon.src.includes("sun")){
+function changeTheme() {
+  if (themeIcon.src.includes("sun")) {
     mobileFilter.style.backgroundColor = "hsl(236, 33%, 92%)"
     mobileFilter.style.color = "rgba(0, 0, 0, .8)"
     themeIcon.src = "img/todo/icon-moon.svg"
@@ -205,7 +240,7 @@ function changeTheme(){
     taskContent.style.color = "hsl(234, 11%, 40%)"
     taskContent.style.boxShadow = "2px 2px 10px white"
   }
-  else{
+  else {
     mobileFilter.style.color = "white"
     themeIcon.src = "img/todo/icon-sun.svg"
     todo.style.backgroundImage = "url('img/todo/bg-desktop-dark.jpg')"
@@ -220,3 +255,7 @@ function changeTheme(){
     mobileFilter.style.backgroundColor = "rgb(37 39 60)"
   }
 }
+
+window.addEventListener("beforeunload", () => {
+  localStorage.setItem("storage", JSON.stringify(storage));
+})
