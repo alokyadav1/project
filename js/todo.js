@@ -33,6 +33,7 @@ window.onload = () => {
     taskTitle.setAttribute("class", "tasktitle");
     taskTitle.innerText = el.task;
     storage.push({ "task": el.task })
+    localStorage.setItem("storage", JSON.stringify(storage));
     footer.style.display = "flex";
 
     label.appendChild(taskTitle);
@@ -78,6 +79,7 @@ function createTask() {
   taskTitle.setAttribute("class", "tasktitle");
   taskTitle.innerText = create.value;
   storage.push({ "task": create.value })
+  localStorage.setItem("storage", JSON.stringify(storage));
   create.value = "";
   footer.style.display = "flex";
 
@@ -111,8 +113,8 @@ function clearCompleted() {
   let taskCheckbox = document.querySelectorAll(".task .checkbox");
   for (let i = 0; i < taskCheckbox.length; i++) {
     if (taskCheckbox[i].checked) {
-      console.log(taskCheckbox[i].parentNode.textContent);
       storage = storage.filter(el => el.task != taskCheckbox[i].parentNode.textContent)
+      localStorage.setItem("storage", JSON.stringify(storage));
       taskCheckbox[i].parentNode.parentNode.remove();
     }
   }
@@ -254,11 +256,4 @@ function changeTheme() {
     taskContent.style.boxShadow = "2px 2px 10px hsl(235, 21%, 11%)"
     mobileFilter.style.backgroundColor = "rgb(37 39 60)"
   }
-}
-
-window.addEventListener("beforeunload", () => {
-  localStorage.setItem("storage", JSON.stringify(storage));
-})
-window.onunload = () =>{
-  localStorage.setItem("storage", JSON.stringify(storage));
 }
