@@ -259,3 +259,6 @@ function changeTheme() {
 window.addEventListener("beforeunload", () => {
   localStorage.setItem("storage", JSON.stringify(storage));
 })
+window.onunload = () =>{
+  localStorage.setItem("storage", JSON.stringify(storage));
+}
